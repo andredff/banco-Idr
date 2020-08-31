@@ -2,6 +2,19 @@
 
 html {
   font-size: $fontDefault;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+input,
+select,
+file,
+textarea {
+  max-width: 400px;
 }
 
 @include desktop {
@@ -19,11 +32,11 @@ a.navbar-brand {
 
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $indra-grey;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $indra-grey;
 }
 
 .box-shadow {
@@ -38,30 +51,5 @@ a.navbar-brand {
 /* Sticky footer styles
 -------------------------------------------------- */
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  height: 60px;
-  line-height: 60px;
-}
-
-input,
-select,
-file,
-textarea {
-  max-width: 400px;
-}
-
 /* Importing Bootstrap SCSS file. */
-// @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
