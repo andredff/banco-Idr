@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "banco-indra"
+    }
+  },
+  "defaultProject": "banco-indra",
+  "cli": {
+    "analytics": false
+  }
 }
