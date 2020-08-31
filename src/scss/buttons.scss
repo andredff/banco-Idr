@@ -1,0 +1,45 @@
+.btn-indra {
+  color: #ffffff;
+  background-color: #EC7000;
+  border-color: #EC7000;
+}
+
+.btn-indra:hover,
+.btn-indra:focus,
+.btn-indra:active,
+.btn-indra.active,
+.open .dropdown-toggle.btn-indra {
+  color: #ffffff;
+  background-color: #D1701B;
+  border-color: #EC7000;
+}
+
+.btn-indra:active,
+.btn-indra.active,
+.open .dropdown-toggle.btn-indra {
+  background-image: none;
+}
+
+.btn-indra.disabled,
+.btn-indra[disabled],
+fieldset[disabled] .btn-indra,
+.btn-indra.disabled:hover,
+.btn-indra[disabled]:hover,
+fieldset[disabled] .btn-indra:hover,
+.btn-indra.disabled:focus,
+.btn-indra[disabled]:focus,
+fieldset[disabled] .btn-indra:focus,
+.btn-indra.disabled:active,
+.btn-indra[disabled]:active,
+fieldset[disabled] .btn-indra:active,
+.btn-indra.disabled.active,
+.btn-indra[disabled].active,
+fieldset[disabled] .btn-indra.active {
+  background-color: #EC7000;
+  border-color: #EC7000;
+}
+
+.btn-indra .badge {
+  color: #EC7000;
+  background-color: #ffffff;
+}

@@ -1,0 +1,29 @@
+@import '../../../scss/index.scss';
+
+.bg-grey {
+  background-color: $indra-light-grey;
+}
+
+.title {
+  color: $indra-primary;
+  font-weight: $fontBold;
+  &:hover {
+    text-decoration: none;
+    color: $indra-primary;
+  }
+}
+
+.nav-item {
+  font-weight: $fontRegular;
+}
+
+.nav-link {
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: $indra-white;
+  color: $indra-primary;
+  height: 100%;
+}

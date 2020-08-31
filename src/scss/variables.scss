@@ -1,7 +1,7 @@
-$fontFamily:  'Poppins', sans-serif;
-$fontTitle: 'Permanent Marker', cursive;
+$fontFamily:  'Roboto', sans-serif;
 
 $indra-primary: #EC7000;
+$indra-light-grey: #EFE9E5;
 $indra-grey: #605751;
 $indra-white: #FFFFFF;
 
@@ -26,5 +26,5 @@ $spacers: (
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3),
-  6: ($spacer * 5)
+  6: ($spacer * 4)
 )
