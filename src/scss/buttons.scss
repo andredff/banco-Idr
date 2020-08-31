@@ -43,3 +43,50 @@ fieldset[disabled] .btn-indra.active {
   color: #EC7000;
   background-color: #ffffff;
 }
+
+
+.btn-indra-outline {
+  color: #EC7000;
+  background-color: #FFFFFF;
+  border-color: #EC7000;
+}
+
+.btn-indra-outline:hover,
+.btn-indra-outline:focus,
+.btn-indra-outline:active,
+.btn-indra-outline.active,
+.open .dropdown-toggle.btn-indra-outline {
+  color: #EC7000;
+  background-color: #F2F2F2;
+  border-color: #EC7000;
+}
+
+.btn-indra-outline:active,
+.btn-indra-outline.active,
+.open .dropdown-toggle.btn-indra-outline {
+  background-image: none;
+}
+
+.btn-indra-outline.disabled,
+.btn-indra-outline[disabled],
+fieldset[disabled] .btn-indra-outline,
+.btn-indra-outline.disabled:hover,
+.btn-indra-outline[disabled]:hover,
+fieldset[disabled] .btn-indra-outline:hover,
+.btn-indra-outline.disabled:focus,
+.btn-indra-outline[disabled]:focus,
+fieldset[disabled] .btn-indra-outline:focus,
+.btn-indra-outline.disabled:active,
+.btn-indra-outline[disabled]:active,
+fieldset[disabled] .btn-indra-outline:active,
+.btn-indra-outline.disabled.active,
+.btn-indra-outline[disabled].active,
+fieldset[disabled] .btn-indra-outline.active {
+  background-color: #FFFFFF;
+  border-color: #EC7000;
+}
+
+.btn-indra-outline .badge {
+  color: #FFFFFF;
+  background-color: #EC7000;
+}
