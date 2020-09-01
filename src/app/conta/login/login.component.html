@@ -2,27 +2,35 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 col-sm-12 box-shadow login-box">
-        <form novalidate [formGroup]="loginForm">
+        <form novalidate (ngSubmit)="acessarConta()" [formGroup]="loginForm">
           <h2 class="my-5">Acessar conta</h2>
           <div class="row">
             <div class="col-6">
               <div class="form-group">
                 <label class="control-label">Agência</label>
-                <input class="form-control" id="agencia" type="text" placeholder="" formControlName="agencia" />
+                <input class="form-control" id="agencia" type="text" placeholder="" formControlName="agencia"
+                [ngClass]="{'is-invalid': f.agencia.errors && f.agencia.touched }" />
+                <div class="control-errors" *ngIf="f.agencia.errors && f.agencia.touched">
+                  <span class="text-danger" *ngIf="f.agencia.errors.required"> Campo obrigatório</span>
+                </div>
               </div>
             </div>
 
             <div class="col-6">
               <div class="form-group">
                 <label class="control-label">Conta</label>
-                <input class="form-control" id="conta" type="text" placeholder="" formControlName="conta" />
+                <input class="form-control" id="conta" type="text" placeholder="" formControlName="conta"
+                [ngClass]="{'is-invalid': f.conta.errors && f.conta.touched }" />
+                <div class="control-errors" *ngIf="f.conta.errors && f.conta.touched">
+                  <span class="text-danger" *ngIf="f.conta.errors.required"> Campo obrigatório</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="row my-5">
             <div class="col-12">
-              <button class="btn btn-block btn-indra">Acessar conta</button>
+              <button type="submit" class="btn btn-block btn-indra">Acessar conta</button>
             </div>
           </div>
         </form>

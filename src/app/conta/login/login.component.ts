@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { ContaService } from '../services/conta.service';
 import { Conta } from '../models/conta.model';
+import { FormErrors } from 'src/app/utils';
 
 @Component({
   selector: 'app-login',
@@ -23,12 +24,16 @@ export class LoginComponent implements OnInit {
 
   createForm() {
     this.loginForm = this.fb.group({
-      agencia: ['', [Validators.required]],
+      agencia: ['', Validators.required],
       conta: ['', Validators.required]
     });
   }
 
+  get f() { return this.loginForm.controls; }
+
   acessarConta() {
+    FormErrors.showValidationMsg(this.loginForm);
+
     if (this.loginForm.dirty && this.loginForm.valid) {
       this.conta = Object.assign({}, this.conta, this.loginForm.value);
 

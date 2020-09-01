@@ -22,6 +22,11 @@
       "aceiteTermo": true,
       "aceiteNewsletter": true,
       "id": 2
+    },
+    {
+      "agencia": "123123",
+      "conta": "123123",
+      "id": 3
     }
   ]
 }

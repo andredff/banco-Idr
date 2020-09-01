@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
 
 import { CustomValidators } from 'ngx-custom-validators';
@@ -12,8 +11,7 @@ import { ContaService } from '../services/conta.service';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.scss'],
-  providers: [DatePipe]
+  styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent implements OnInit {
 
@@ -22,7 +20,7 @@ export class CadastroComponent implements OnInit {
   usuario: Usuario;
 
 
-  constructor(private fb: FormBuilder, private contaService: ContaService, private router: Router, private datePipe: DatePipe) {
+  constructor(private fb: FormBuilder, private contaService: ContaService, private router: Router) {
 
   }
 
@@ -52,8 +50,7 @@ export class CadastroComponent implements OnInit {
 
   adicionarConta() {
 
-    let date = this.cadastroForm.controls.dataNascimento.value;
-    console.log(this.datePipe.transform(date, 'yyyy-MM-dd'));
+    this.router.navigate(['/home']);
 
     FormErrors.showValidationMsg(this.cadastroForm);
 
