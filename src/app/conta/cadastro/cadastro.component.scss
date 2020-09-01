@@ -1,40 +1,63 @@
 @import '../../../scss/index.scss';
 
 .cadastro-container {
-  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ec7000;
+  padding-top: 60px;
+}
+
+.box-img {
+  display: none;
 }
 
 .form-group {
-  height: 80px;
+  height: 70px;
   .control-label {
-    font-size: 14px;
+    font-size: $fontDefault;
     margin-bottom: 0;
   }
   .control-errors {
     display: flex;
     .text-danger {
-      font-size: 12px;
+      font-size: $fontSM;
       margin: 0;
     }
   }
 }
 
+.terms {
+  margin: 0 6px;
+  font-size: $fontSM;
+}
+
+.custom-control-label:before{
+  background-color:red;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color:black;
+}
+
+input[type="checkbox"]:checked {
+  background-color: $indra-primary;
+}
+
 input.ng-valid.ng-touched {
-  border: 1px solid green !important;
+  border: 1px solid green;
 }
 
 input.ng-invalid.ng-touched {
-  border: 1px solid red !important;
+  border: 1px solid red;
 }
 
 @include desktop {
-  .card {
-    width: 800px;
-    max-width: 90%;
+  .cadastro-container {
+    height: 100%;
+    padding-top: 0;
+  }
+  .box-img {
+    display: flex;
+    justify-content: flex-end;
   }
 }

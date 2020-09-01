@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContaRoutingModule } from './conta.route';
 import { CustomFormsModule } from 'ngx-custom-validators';
+import { NgxMaskModule } from 'ngx-mask';
 
 import { ContaAppComponent } from './conta.app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     ContaRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomFormsModule
+    CustomFormsModule,
+    NgxMaskModule.forRoot(),
   ]
 })
 export class ContaModule { }

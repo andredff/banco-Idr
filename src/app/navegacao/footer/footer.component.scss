@@ -1,7 +1,7 @@
 @import '../../../scss/index.scss';
 
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -9,4 +9,10 @@
   line-height: 60px;
   background-color: $indra-grey;
   color: $indra-white;
+}
+
+@include desktop {
+  .footer {
+    position: fixed
+  }
 }

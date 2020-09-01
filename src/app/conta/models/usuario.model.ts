@@ -1,7 +1,7 @@
 export interface Usuario {
   id: string;
   nome: string;
-  cpf: string;
+  cpf: number;
   celular: number;
   email: string;
   dataNascimento: string;

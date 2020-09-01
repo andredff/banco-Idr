@@ -1,48 +1,58 @@
-import { AbstractControl } from '../../../node_modules/@angular/forms';
+import { AbstractControl, Validators } from '../../../node_modules/@angular/forms';
 
-export function Validacpf(controle: AbstractControl) {
-  const cpf = controle.value;
+export class ValidaCpf {
+  constructor() {}
 
-  let soma: number = 0;
-  let resto: number;
-  let valido: boolean;
+  /**
+   * Valida se o CPF é valido. Deve-se ser informado o cpf sem máscara.
+  */
+  static isValidCpf() {
+    return (control: AbstractControl): Validators => {
+      const cpf = control.value;
+      if (cpf) {
+        let numbers, digits, sum, i, result, equalDigits;
+        equalDigits = 1;
+        if (cpf.length < 11) {
+         return null;
+        }
 
-  const regex = new RegExp('[0-9]{11}');
+        for (i = 0; i < cpf.length - 1; i++) {
+          if (cpf.charAt(i) !== cpf.charAt(i + 1)) {
+            equalDigits = 0;
+            break;
+          }
+        }
 
-  if (
-    cpf == '00000000000' ||
-    cpf == '11111111111' ||
-    cpf == '22222222222' ||
-    cpf == '33333333333' ||
-    cpf == '44444444444' ||
-    cpf == '55555555555' ||
-    cpf == '66666666666' ||
-    cpf == '77777777777' ||
-    cpf == '88888888888' ||
-    cpf == '99999999999' ||
-    !regex.test(cpf)
-  )
-    valido = false;
-  else {
-    for (let i = 1; i <= 9; i++)
-      soma = soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
-    resto = (soma * 10) % 11;
+        if (!equalDigits) {
+          numbers = cpf.substring(0, 9);
+          digits = cpf.substring(9);
+          sum = 0;
+          for (i = 10; i > 1; i--) {
+            sum += numbers.charAt(10 - i) * i;
+          }
 
-    if (resto == 10 || resto == 11) resto = 0;
-    if (resto != parseInt(cpf.substring(9, 10))) valido = false;
+          result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
 
-    soma = 0;
-    for (let i = 1; i <= 10; i++)
-      soma = soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
-    resto = (soma * 10) % 11;
+          if (result !== Number(digits.charAt(0))) {
+            return { cpfNotValid: true };
+          }
+          numbers = cpf.substring(0, 10);
+          sum = 0;
 
-    if (resto == 10 || resto == 11) resto = 0;
-    if (resto != parseInt(cpf.substring(10, 11))) valido = false;
-    valido = true;
-  }
+          for (i = 11; i > 1; i--) {
+            sum += numbers.charAt(11 - i) * i;
+          }
+          result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
 
-  if (valido) return null;
-
-  return { cpfInvalido: true };
+          if (result !== Number(digits.charAt(1))) {
+            return { cpfNotValid: true };
+          }
+          return null;
+        } else {
+          return { cpfNotValid: true };
+        }
+     }
+   return null;
+ };
 }
-
+}
