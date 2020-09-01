@@ -2,25 +2,14 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "json-server",
-      "cpf": "typicode",
+      "nome": "andre souza",
+      "cpf": "08351852490",
       "celular": "11942407562",
       "email": "andredff@gmail.com",
       "dataNascimento": "10081988",
       "senha": "123123",
       "aceiteTermo": true,
       "aceiteNewsLetter": true
-    },
-    {
-      "nome": "json-server",
-      "cpf": "typicode",
-      "celular": "11942407562",
-      "email": "andredff@gmail.com",
-      "dataNascimento": "10081988",
-      "senha": "123123",
-      "aceiteTermo": true,
-      "aceiteNewsLetter": true,
-      "id": 2
     }
   ]
 }
