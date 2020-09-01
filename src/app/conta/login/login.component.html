@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container-fluid login-container">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-sm-12 box-shadow login-box">
+        <form novalidate [formGroup]="loginForm">
+          <h2 class="my-5">Acessar conta</h2>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label class="control-label">Agência</label>
+                <input class="form-control" id="agencia" type="text" placeholder="" formControlName="agencia" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label class="control-label">Conta</label>
+                <input class="form-control" id="conta" type="text" placeholder="" formControlName="conta" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-5">
+            <div class="col-12">
+              <button class="btn btn-block btn-indra">Acessar conta</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-6 box-img">
+          <img class="box-shadow" src="../../../assets/img3.jpg" alt="bank">
+        </div>
+
+    </div>
+  </div>
+</div>

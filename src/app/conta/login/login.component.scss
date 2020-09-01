@@ -1,0 +1,26 @@
+@import '../../../scss/index.scss';
+
+.login-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+@include desktop {
+  .login-container {
+    height: 100%;
+    padding-top: 0;
+  }
+  .box-img {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 100%;
+    };
+  }
+  .login-box {
+    min-height: 360px;
+  }
+}
