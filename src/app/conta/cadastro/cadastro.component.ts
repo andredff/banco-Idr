@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-
-import { CustomValidators } from 'ngx-custom-validators';
-
-import { Usuario } from '../models/usuario.model';
 import { Router } from '@angular/router';
 
-// import { ValidaCpf } from './../../utils/cpf-validator';
-// import { FullName } from '../../utils/fullName.validator';
-// import { FormErrors } from '../../utils/formErrors.validator';
-// import { Age } from '../../utils/age.validator';
+import { CustomValidators } from 'ngx-custom-validators';
 import { CellPhone, Age, FormErrors, FullName, ValidaCpf } from '../../utils';
+
+import { Usuario } from '../models/usuario.model';
+import { ContaService } from '../services/conta.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -26,7 +22,7 @@ export class CadastroComponent implements OnInit {
   usuario: Usuario;
 
 
-  constructor(private fb: FormBuilder, private router: Router, private datePipe: DatePipe) {
+  constructor(private fb: FormBuilder, private contaService: ContaService, private router: Router, private datePipe: DatePipe) {
 
   }
 
@@ -43,7 +39,7 @@ export class CadastroComponent implements OnInit {
       cpf: ['', [Validators.required, ValidaCpf.isValidCpf()]],
       celular: ['', [Validators.required, CellPhone]],
       email: ['', [Validators.required, Validators.email]],
-      dataNascimento: ['', [Validators.required, Age]],
+      dataNascimento: ['', [Validators.required]],
       senha: senha,
       confirmaSenha: senhaConfirm,
       aceiteTermo: ['', Validators.required],
@@ -60,12 +56,23 @@ export class CadastroComponent implements OnInit {
     console.log(this.datePipe.transform(date, 'yyyy-MM-dd'));
 
     FormErrors.showValidationMsg(this.cadastroForm);
+
     if (this.cadastroForm.dirty && this.cadastroForm.valid) {
       this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
 
-      console.log('cadastro ->', this.usuario)
+      this.contaService.registrarUsuario(this.usuario)
+      .subscribe(
+        sucesso => {
+          this.cadastroForm.reset();
+          this.router.navigate(['/home']);
+        },
+        falha => {
+          console.log('Ocorreu um erro!');
+        }
+      );
     }
   }
+
 
 
 

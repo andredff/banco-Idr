@@ -10,6 +10,18 @@
       "senha": "123123",
       "aceiteTermo": true,
       "aceiteNewsLetter": true
+    },
+    {
+      "nome": "joao souza",
+      "cpf": "08351852490",
+      "celular": "11929492939",
+      "email": "andredff@gmail.com",
+      "dataNascimento": "10081988",
+      "senha": "123123",
+      "confirmaSenha": "123123",
+      "aceiteTermo": true,
+      "aceiteNewsletter": true,
+      "id": 2
     }
   ]
 }
