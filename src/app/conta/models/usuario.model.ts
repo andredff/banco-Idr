@@ -5,8 +5,8 @@ export interface Usuario {
   celular: number;
   email: string;
   dataNascimento: string;
-  password: string;
-  confirmPassword: string;
+  senha: string;
+  confirmaSenha: string;
   aceiteTermo: boolean;
   aceiteNewsletter: boolean;
 }

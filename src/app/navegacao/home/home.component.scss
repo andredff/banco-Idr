@@ -1,9 +1,12 @@
 @import '../../../scss/index.scss';
 
-.orange-primary {
-  background-color: $indra-primary;
-}
+  .banner {
+    background-color: $indra-primary;
+    padding: 80px 0;
+  }
 
-.home {
-  margin-bottom: 60px;
-}
+  .home {
+    margin-bottom: 60px;
+  }
+
+  @include desktop {}
