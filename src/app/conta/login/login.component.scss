@@ -8,6 +8,10 @@
   padding-top: 60px;
 }
 
+button {
+  font-size: $fontMD;
+}
+
 @include desktop {
   .login-container {
     height: 100%;

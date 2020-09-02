@@ -32,6 +32,10 @@
   font-size: $fontSM;
 }
 
+button {
+  font-size: $fontMD;
+}
+
 .custom-control-label:before{
   background-color:red;
 }
@@ -51,6 +55,13 @@ input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
+@include tablet {
+  .cadastro-container {
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
 @include desktop {
   .cadastro-container {
     height: 100%;
@@ -59,6 +70,5 @@ input.ng-invalid.ng-touched {
   .box-img {
     display: flex;
     justify-content: flex-end;
-
   }
 }

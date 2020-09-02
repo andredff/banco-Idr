@@ -1,1 +1,10 @@
 @import '../../../scss/index.scss';
+
+@include mobile {
+  .nav-item {
+    margin-bottom: 12px;
+  }
+  .tests {
+    margin: 30px;
+  }
+}

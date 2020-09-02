@@ -27,21 +27,31 @@
 
 .card-in {
   h1 {
-    font-size: $fontXG;
+    font-size: $fontLG;
     color: $indra-white;
     font-weight: $fontBold;
-
   }
   p {
-    font-size: $fontLG;
+    font-size: $fontMD;
     color: $indra-white;
     font-weight: $fontRegular;
     margin: 2rem 0;
   }
   button {
-    font-size: $fontLG;
+    font-size: $fontMD;
   }
 }
 
 @include desktop {
+  .card-in {
+    h1 {
+      font-size: $fontXG;
+    }
+    p {
+      font-size: $fontLG;
+    }
+    button {
+      font-size: $fontLG;
+    }
+  }
 }

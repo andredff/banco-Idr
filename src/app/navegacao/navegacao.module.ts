@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuLoginComponent } from './menu-login/menu-login.component';
+import { PaginasModule } from '../paginas/paginas.module';
 
 
 @NgModule({

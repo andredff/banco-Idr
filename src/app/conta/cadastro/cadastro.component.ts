@@ -3,11 +3,10 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { Router } from '@angular/router';
 
 import { CustomValidators } from 'ngx-custom-validators';
-import { CellPhone, Age, FormErrors, FullName, ValidaCpf } from '../../utils';
+import { CellPhone, FormErrors, FullName, ValidaCpf, DateValidator } from '../../utils';
 
 import { Usuario } from '../models/usuario.model';
 import { ContaService } from '../services/conta.service';
-import { DateValidator } from './../../utils/date.validator';
 
 @Component({
   selector: 'app-cadastro',
