@@ -2,6 +2,7 @@ import { AbstractControl } from '@angular/forms';
 
 export function Age(control: AbstractControl) {
   if (control.value) {
+    console.log(control.value);
     const age = getAgeFromBirthday(control.value);
     if (age < 18) {
       return { invalidAge: true};

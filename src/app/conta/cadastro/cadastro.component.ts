@@ -7,6 +7,7 @@ import { CellPhone, Age, FormErrors, FullName, ValidaCpf } from '../../utils';
 
 import { Usuario } from '../models/usuario.model';
 import { ContaService } from '../services/conta.service';
+import { DateValidator } from './../../utils/date.validator';
 
 @Component({
   selector: 'app-cadastro',
@@ -37,7 +38,7 @@ export class CadastroComponent implements OnInit {
       cpf: ['', [Validators.required, ValidaCpf.isValidCpf()]],
       celular: ['', [Validators.required, CellPhone]],
       email: ['', [Validators.required, Validators.email]],
-      dataNascimento: ['', [Validators.required]],
+      dataNascimento: ['', [Validators.required, DateValidator.validateDate]],
       senha: senha,
       confirmaSenha: senhaConfirm,
       aceiteTermo: ['', Validators.required],

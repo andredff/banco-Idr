@@ -65,6 +65,7 @@
                 [ngClass]="{'is-invalid': f.dataNascimento.errors && f.dataNascimento.touched }" />
               <div class="control-errors" *ngIf="f.dataNascimento.errors && f.dataNascimento.touched">
                 <span class="text-danger" *ngIf="f.dataNascimento.errors.required"> Campo obrigatório</span>
+                <span class="text-danger" *ngIf="!f.dataNascimento.errors.required && f.dataNascimento.errors.validateDate"> Digite uma data válida</span>
               </div>
 
             </div>
