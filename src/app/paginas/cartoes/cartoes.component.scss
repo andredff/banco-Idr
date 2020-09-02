@@ -1,13 +1,11 @@
 @import '../../../scss/index.scss';
 
-.main-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // padding-top: 60px;
+.pages-container {
+  padding: 60px 0;
 }
 
-.bg-indra {
-  background-color: $indra-primary;
+@include desktop {
+  .pages-container {
+    padding-top: 60px;
+  }
 }

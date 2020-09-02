@@ -18,8 +18,6 @@ export class DateValidator {
       return false;
     }
     dateString = dateString.substr(0, 10).trim();
-    // Validates that the input string is a valid date formatted as "dd/mm/yyyy" ou ddmmyyyy
-    // First check for the pattern
     if (dateString.indexOf('/') === -1) { //data sem mascara
       var day = parseInt(dateString.substring(0, 2), 10);
       var month = parseInt(dateString.substring(2, 4), 10);
@@ -27,7 +25,6 @@ export class DateValidator {
     } else if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString)) {
       return false;
     } else { // dd/mm/yyyy
-      // Parse the date parts to integers
       var parts = dateString.split("/");
       var day = parseInt(parts[0], 10);
       var month = parseInt(parts[1], 10);

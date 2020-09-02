@@ -1,19 +1,36 @@
 @import '../../../scss/index.scss';
 
 .login-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
+  padding-bottom: 60px;
+  .title {
+    font-size: $fontDefault;
+  }
 }
 
 .login-box {
-  min-height: 560px;
+  min-height: 360px;
 }
 
 .box-img {
   display: none;
+  img{
+    width: 100%;
+  }
+}
+
+.form-group {
+  height: 70px;
+  .control-label {
+    font-size: $fontSM;
+    margin-bottom: 0;
+  }
+  .control-errors {
+    display: flex;
+    .text-danger {
+      font-size: $fontSM;
+      margin: 0;
+    }
+  }
 }
 
 button {
@@ -22,17 +39,13 @@ button {
 
 @include desktop {
   .login-container {
-    height: 100%;
-    padding-top: 0;
+    padding-top: 60px;
+    .title{
+      font-size: $fontLG;
+    }
   }
   .box-img {
     display: flex;
     justify-content: flex-end;
-    img {
-      width: 100%;
-    };
-  }
-  .login-box {
-    min-height: 360px;
   }
 }

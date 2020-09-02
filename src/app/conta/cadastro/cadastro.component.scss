@@ -1,26 +1,20 @@
 @import '../../../scss/index.scss';
 
-.cadastro-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-}
-
-.container {
-  margin-bottom: 120px;
-
-}
-
 .box-img {
   display: none;
+}
+
+.cadastro-container {
+  padding-bottom: 60px;
+  .title {
+    font-size: $fontDefault;
+  }
 }
 
 .form-group {
   height: 70px;
   .control-label {
-    font-size: $fontDefault;
+    font-size: $fontSM;
     margin-bottom: 0;
   }
   .control-errors {
@@ -41,36 +35,12 @@ button {
   font-size: $fontMD;
 }
 
-.custom-control-label:before{
-  background-color:red;
-}
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-  background-color:black;
-}
-
-input[type="checkbox"]:checked {
-  background-color: $indra-primary;
-}
-
-input.ng-valid.ng-touched {
-  border: 1px solid green;
-}
-
-input.ng-invalid.ng-touched {
-  border: 1px solid red;
-}
-
-@include tablet {
-  .cadastro-container {
-    height: 100%;
-    padding-top: 0;
-  }
-}
-
 @include desktop {
   .cadastro-container {
-    height: 100%;
-    padding-top: 0;
+    padding-top: 60px;
+    .title{
+      font-size: $fontLG;
+    }
   }
   .box-img {
     display: flex;
