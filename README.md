@@ -2,11 +2,11 @@
 <p align="center">Projeto <strong>Banco Indra</strong> Página web de um banco com formulário de cadastro e login. </p>
 
 <p align="center">
-  <a aria-label="Versão do Node" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V12.md#12.16.3">
-    <img src="https://img.shields.io/badge/node.js@lts-12.16.3-informational?logo=Node.JS"></img>
-  </a>
   <a aria-label="Versão do Angular" href="https://github.com/angular/angular/compare/9.0.0...9.1.0">
     <img src="https://img.shields.io/badge/Angular-9.1.0-red?style=social&logo=angular"></img>
+  </a>
+  <a aria-label="Versão do Node" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V12.md#12.16.3">
+    <img src="https://img.shields.io/badge/node.js@lts-12.16.3-informational?logo=Node.JS"></img>
   </a>
   <a aria-label="Versão do Angular" href="#">
     <img src="https://img.shields.io/badge/Vers%C3%A3o-1.0.0-orange"></img>
