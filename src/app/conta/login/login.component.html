@@ -1,11 +1,11 @@
 <div class="container-fluid login-container">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 col-sm-12 box-shadow login-box">
+      <div class="col-lg-6 col-md-12 col-sm-12 box-shadow login-box">
         <form novalidate (ngSubmit)="acessarConta()" [formGroup]="loginForm">
           <h2 class="my-5">Acessar conta</h2>
           <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12">
               <div class="form-group">
                 <label class="control-label">Agência</label>
                 <input class="form-control" id="agencia" type="text" placeholder="" formControlName="agencia"
@@ -16,8 +16,8 @@
               </div>
             </div>
 
-            <div class="col-6">
-              <div class="form-group">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="form-group">
                 <label class="control-label">Conta</label>
                 <input class="form-control" id="conta" type="text" placeholder="" formControlName="conta"
                 [ngClass]="{'is-invalid': f.conta.errors && f.conta.touched }" />

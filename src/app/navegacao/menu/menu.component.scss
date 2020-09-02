@@ -14,7 +14,7 @@
 }
 
 .nav-item {
-  font-size: $fontMD;
+  font-size: $fontSM;
   font-weight: $fontRegular;
 }
 
@@ -27,4 +27,16 @@
   background-color: $indra-white;
   color: $indra-primary !important;
   height: 100%;
+}
+
+@include tablet {
+  .nav-item {
+    font-size: $fontSM;
+  }
+}
+
+@include desktop {
+  .nav-item {
+    font-size: $fontMD;
+  }
 }
